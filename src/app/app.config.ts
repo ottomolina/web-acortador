@@ -5,6 +5,8 @@ import { routes } from './app.routes';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideLottieOptions } from 'ngx-lottie';
+import player from 'lottie-web/build/player/lottie_svg';
 
 function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './i18n/', '.json');
@@ -23,5 +25,6 @@ export const appConfig: ApplicationConfig = {
         deps: [ HttpClient ],
       },
     }),
+    provideLottieOptions({ player: () => player }),
   ]
 };
