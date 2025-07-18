@@ -4,5 +4,9 @@
         "parragraph2": "La página que estás intentando acceder no está disponible o ha sido movida.",
         "parragraph3": "Intenta volver a la página de inicio.",
         "home_button": "Regresar a inicio"
+    },
+    "login": {
+        "card-title": "Bienvenido",
+        "error-login": "Ha ocurrido un error mientras intentabas acceder, por favor reintenta más tarde."
     }
 }
