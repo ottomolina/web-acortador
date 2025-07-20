@@ -9,6 +9,8 @@ import { provideLottieOptions } from 'ngx-lottie';
 import player from 'lottie-web/build/player/lottie_svg';
 import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { environment } from '../environments/environment.development';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './i18n/', '.json');
@@ -43,6 +45,8 @@ export const appConfig: ApplicationConfig = {
           console.error(err);
         }
       } as SocialAuthServiceConfig,
-    }
+    },
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
   ]
 };
