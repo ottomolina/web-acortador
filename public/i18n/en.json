@@ -15,5 +15,9 @@
     },
     "links": {
         "title-tabbar": "My Links Shortened"
+    },
+    "item-link": {
+        "button-copy": "Copy",
+        "copied": "Link copied!"
     }
 }

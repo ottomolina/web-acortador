@@ -1,0 +1,26 @@
+<div class="row g-0 gy-3 gy-md-0 p-2 mt-2 container-todo-link">
+    <div class="col-md-8 d-flex column-gap-3 container-link">
+        <div class="container-icon">
+            <img alt="Favicon for url"
+                src="https://www.google.com/s2/favicons?domain={{item.urlOriginal}}&amp;sz=32">
+        </div>
+        <div class="detail-link">
+            <a class="link short-link" target="_blank" [href]="getUrlShort()">
+                {{getUrlShort()}}
+            </a>
+            <a class="link long-link" target="_blank" [href]="item.urlOriginal">
+                {{item.urlOriginal}}
+            </a>
+            <span>
+                <i class="bx bx-calendar-alt"></i>
+                <span>{{item.date | dateFormat}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end align-self-center row-gap-1">
+        <button type="button" class="btn btn-actions btn-copy" (click)="btnCopy()">
+            <i class='bx bx-copy'></i>
+             {{'item-link.button-copy' | translate}}
+        </button>
+    </div>
+</div>
