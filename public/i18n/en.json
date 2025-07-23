@@ -8,5 +8,9 @@
     "login": {
         "card-title": "Welcome",
         "error-login": "An error has occurred while you were trying to access, please retry later."
+    },
+    "nav": {
+        "title": "Link Shortener",
+        "menu1": "My Links"
     }
 }

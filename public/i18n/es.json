@@ -8,5 +8,9 @@
     "login": {
         "card-title": "Bienvenido",
         "error-login": "Ha ocurrido un error mientras intentabas acceder, por favor reintenta más tarde."
+    },
+    "nav": {
+        "title": "Acortador de Enlaces",
+        "menu1": "Mis Enlaces"
     }
 }
