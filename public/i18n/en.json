@@ -12,5 +12,8 @@
     "nav": {
         "title": "Link Shortener",
         "menu1": "My Links"
+    },
+    "links": {
+        "title-tabbar": "My Links Shortened"
     }
 }

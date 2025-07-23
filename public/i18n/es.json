@@ -12,5 +12,8 @@
     "nav": {
         "title": "Acortador de Enlaces",
         "menu1": "Mis Enlaces"
+    },
+    "links": {
+        "title-tabbar": "Mis Enlaces Acortados"
     }
 }
