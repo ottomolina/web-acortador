@@ -14,7 +14,10 @@
         "menu1": "My Links"
     },
     "links": {
-        "title-tabbar": "My Links Shortened"
+        "title-tabbar": "My Links Shortened",
+        "error": {
+            "load-data": "An error has occurred while data was loading, please retry later."
+        }
     },
     "item-link": {
         "button-copy": "Copy",

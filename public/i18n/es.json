@@ -14,7 +14,10 @@
         "menu1": "Mis Enlaces"
     },
     "links": {
-        "title-tabbar": "Mis Enlaces Acortados"	
+        "title-tabbar": "Mis Enlaces Acortados",
+        "error": {
+            "load-data": "Ocurrió un problema al cargar los datos, por favor reintenta más tarde."
+        }
     },
     "item-link": {
         "button-copy": "Copiar",
