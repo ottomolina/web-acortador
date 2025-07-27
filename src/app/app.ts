@@ -12,6 +12,8 @@ import { Toast } from "./core/components/toast/toast";
 export class App {
   @ViewChild('toast') public toast: Toast;
   protected title = 'web-acortador';
+  public sizePagination: number = 5;
+
   constructor(
       private translate: LanguageTranslationService
   ) {
