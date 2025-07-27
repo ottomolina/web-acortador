@@ -1,5 +1,7 @@
 <div class="container-md g-0 py-2">
-    <app-tabbar [title]="'links.title-tabbar' | translate"></app-tabbar>
+    <app-tabbar [title]="'links.title-tabbar' | translate"
+                (onSearch)="search($event)">
+    </app-tabbar>
     <app-item-link *ngFor="let item of listaLinks | slice: initial:final"
                     [item]="item">
     </app-item-link>

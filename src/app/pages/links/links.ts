@@ -16,7 +16,8 @@ import { Pagination } from "../../core/components/pagination/pagination";
 })
 export default class Links implements OnInit {
   public listaLinks: Array<ShortLink>=[];
-
+  public listaLinksAux: Array<ShortLink>=[];
+  
   public initial: number = 0;
   public final: number = 10;
   
@@ -34,6 +35,7 @@ export default class Links implements OnInit {
     this.linkService.getData().subscribe({
       next: result => {
         this.listaLinks = result;
+        this.listaLinksAux = result;
         this.cdRef.detectChanges();
       },
       error: error => {
@@ -46,6 +48,10 @@ export default class Links implements OnInit {
   public changePage(number: number) {
     this.initial = (this.app.sizePagination*number)-this.app.sizePagination;
     this.final = (this.app.sizePagination*number);
+  }
+
+  public search(word: string) {
+    this.listaLinks = this.listaLinksAux.filter(e => e.urlOriginal.toLowerCase().includes(word.toLowerCase()));
   }
 
 }
