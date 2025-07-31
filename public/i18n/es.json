@@ -23,5 +23,9 @@
     "item-link": {
         "button-copy": "Copiar",
         "copied": "Enlace copiado!"
+    },
+    "button-copy": {
+        "text": "Copiar",
+        "text-copied": "Copiado!"
     }
 }
