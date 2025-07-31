@@ -1,9 +1,9 @@
 
 export class ShortLink {
-    id: string;
+    id?: string;
     urlOriginal: string;
     urlShorten: string;
     date: string;
-    uid: string;
+    uid?: string;
     state: boolean;
 }

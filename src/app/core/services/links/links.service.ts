@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { collectionData, Firestore } from '@angular/fire/firestore';
-import { collection, query, QueryConstraint, where } from 'firebase/firestore';
+import { addDoc, collection, query, QueryConstraint, where } from 'firebase/firestore';
 import { LINK } from '../../constants/links.constants';
 import { AuthService } from '../auth/auth.service';
 import { ShortLink } from '../../interfaces/short-link.model';
@@ -22,6 +22,13 @@ export class LinksService {
         
         const linkRef = query(collection(this.fire, LINK.COLLECTION), ...queryConstraint);
         return collectionData(linkRef, { idField: 'id'}) as Observable<ShortLink[]>;
+    }
+
+    public add(link: ShortLink): Promise<any> {
+        const { id } = this.auth.user!;
+        link.uid = id;
+        const linkRef = collection(this.fire, LINK.COLLECTION);
+        return addDoc(linkRef, link);
     }
 
 }
