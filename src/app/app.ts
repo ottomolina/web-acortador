@@ -18,4 +18,14 @@ export class App {
       private translate: LanguageTranslationService
   ) {
   }
+
+  public getUrlShort(linkShort: string) {
+    return `${location.origin}/${linkShort}`
+  }
+
+  public getDate() {
+    const date = new Date();
+    const offset = date.getTimezoneOffset();
+    return new Date(date.getTime() - (offset*60*1000)).toISOString().split('T')[0];
+  }
 }
