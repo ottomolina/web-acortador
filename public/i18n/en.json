@@ -27,5 +27,17 @@
     "button-copy": {
         "text": "Copy",
         "text-copied": "Copied!"
+    },
+    "form-link": {
+        "title": "Shorten New Link",
+        "placeholder-link": "Enter your long url here",
+        "button-action": "Shorten",
+        "text-result": "Shortened link",
+        "success-result": "Link shortened successfully!",
+        "error": {
+            "txt-url-blank": "Please enter a URL.",
+            "txt-url-invalid": "The URL format is invalid. Make sure to include http:// or https://",
+            "add-link": "An error has occurred while saving your shortened link, please retry later."
+        }
     }
 }

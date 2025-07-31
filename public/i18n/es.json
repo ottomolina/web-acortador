@@ -27,5 +27,17 @@
     "button-copy": {
         "text": "Copiar",
         "text-copied": "Copiado!"
+    },
+    "form-link": {
+        "title": "Acortar un Nuevo Enlace",
+        "placeholder-link": "Ingresa tu url larga aquí",
+        "button-action": "Acortar",
+        "text-result": "Enlace acortado",
+        "success-result": "Enlace acortado con éxito!",
+        "error": {
+            "txt-url-blank": "Por favor introduce una URL.",
+            "txt-url-invalid": "El formato de la URL no es válido. Asegúrate de incluir http:// o https://",
+            "add-link": "Ocurrió un problema mientras se guardaba tu enlace acortado, por favor intenta más tarde."
+        }
     }
 }
