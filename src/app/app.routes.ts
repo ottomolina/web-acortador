@@ -11,6 +11,7 @@ export const routes: Routes = [
         children: [
             { path: '', redirectTo: 'links', pathMatch: 'full' },
             { path: 'links', loadComponent: () => import('./pages/links/links') },
+            { path: 'form-link', loadComponent: () => import('./pages/form-link/form-link') },
         ]
     },
     { path: '**', loadComponent: () => import('./pages/not-found/not-found') }

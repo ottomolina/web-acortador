@@ -12,6 +12,7 @@
     "nav": {
         "title": "Acortador de Enlaces",
         "menu1": "Mis Enlaces",
+        "menu2": "Nuevo Enlace",
         "placeholder-search": "Buscar..."
     },
     "links": {

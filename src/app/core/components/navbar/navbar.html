@@ -7,8 +7,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="dashboard/links">{{'nav.menu1' | translate}}</a>
+                <li class="nav-item" *ngFor="let item of listLinks">
+                    <a class="nav-link"
+                        [ngClass]="{'active': getActive(item.goTo)}"
+                        (click)="clickLink(item.goTo)"
+                        >
+                        {{item.text | translate}}
+                    </a>
                 </li>
             </ul>
         </div>

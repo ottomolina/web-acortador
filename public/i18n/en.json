@@ -12,6 +12,7 @@
     "nav": {
         "title": "Link Shortener",
         "menu1": "My Links",
+        "menu2": "New Link",
         "placeholder-search": "Search..."
     },
     "links": {
