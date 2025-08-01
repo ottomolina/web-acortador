@@ -5,8 +5,8 @@
                 src="https://www.google.com/s2/favicons?domain={{item.urlOriginal}}&amp;sz=32">
         </div>
         <div class="detail-link">
-            <a class="link short-link" target="_blank" [href]="getUrlShort()">
-                {{getUrlShort()}}
+            <a class="link short-link" target="_blank" [href]="app.getUrlShort(item.urlShorten)">
+                {{app.getUrlShort(item.urlShorten)}}
             </a>
             <a class="link long-link" target="_blank" [href]="item.urlOriginal">
                 {{item.urlOriginal}}
@@ -18,9 +18,7 @@
         </div>
     </div>
     <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end align-self-center row-gap-1">
-        <button type="button" class="btn btn-actions btn-copy" (click)="btnCopy()">
-            <i class='bx bx-copy'></i>
-             {{'item-link.button-copy' | translate}}
-        </button>
+        <app-button-copy [textToCopy]="app.getUrlShort(item.urlShorten)">
+        </app-button-copy>
     </div>
 </div>
