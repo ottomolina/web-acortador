@@ -22,7 +22,6 @@ export default class FormLink {
   public showSuccessAlert: boolean = false;
   public shortLink: ShortLink;
   public disabledBtnAction: boolean = false;
-  public textBtnCopy = 'item-link.button-copy';
 
   constructor(
     public app: App,
