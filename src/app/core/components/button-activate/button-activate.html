@@ -1,0 +1,11 @@
+
+<div class="form-check form-switch">
+    <input class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="switchCheckChecked"
+            
+            [checked]="state"
+            [title]="(state ? 'toggle.button-inactive':'toggle.button-active')|translate"
+            (change)="change($event)">
+</div>

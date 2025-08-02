@@ -40,5 +40,9 @@
             "txt-url-invalid": "El formato de la URL no es válido. Asegúrate de incluir http:// o https://",
             "add-link": "Ocurrió un problema mientras se guardaba tu enlace acortado, por favor intenta más tarde."
         }
+    },
+    "toggle": {
+        "button-active": "Activar",
+        "button-inactive": "Inactivar"
     }
 }

@@ -40,5 +40,9 @@
             "txt-url-invalid": "The URL format is invalid. Make sure to include http:// or https://",
             "add-link": "An error has occurred while saving your shortened link, please retry later."
         }
+    },
+    "toggle": {
+        "button-active": "Activate",
+        "button-inactive": "Inactivate"
     }
 }
