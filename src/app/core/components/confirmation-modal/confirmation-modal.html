@@ -1,0 +1,22 @@
+<div class="modal fade" id="alertInactivate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="0"
+     aria-labelledby="alertInactivateLabel" aria-hidden="undefined">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">{{options.title|translate}}</h1>
+                    <button type="button" class="btn-close" (click)="cancelModal()" id="btnClose" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ng-content></ng-content>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="cancelModal()">
+                        {{options.textCancel|translate}}
+                    </button>
+                    <button type="button" class="btn" [class]="options.classBtnAccept" (click)="acceptModal()">
+                        {{options.textAccept|translate}}
+                    </button>
+                </div>
+        </div>
+    </div>
+</div>
