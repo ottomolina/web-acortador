@@ -18,7 +18,24 @@
     "links": {
         "title-tabbar": "My Links Shortened",
         "error": {
-            "load-data": "An error has occurred while data was loading, please retry later."
+            "load-data": "An error has occurred while data was loading, please retry later.",
+            "change-state": "An error has occurred changing the link status, please retry again later."
+        },
+        "modal-inactivate": {
+            "title": "¿Are you sure to disable the link?",
+            "description": "If you inactivate this link every time someone uses it, it will redirect to the page <a href=\"/not-available\" target=\"_blank\">not available</a>.",
+            "button-accept": "Inactivate",
+            "button-cancel": "Cancel"
+        },
+        "modal-activate": {
+            "title": "¿Are you sure to enable the link?",
+            "description": "If you activate this link it will be available again to the people with whom you shared it.",
+            "button-accept": "Activate",
+            "button-cancel": "Cancel"
+        },
+        "alert": {
+            "inactivate": "The link was successfully inactivated.",
+            "activate": "The link was successfully activated."
         }
     },
     "item-link": {

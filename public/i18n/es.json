@@ -18,7 +18,24 @@
     "links": {
         "title-tabbar": "Mis Enlaces Acortados",
         "error": {
-            "load-data": "Ocurrió un problema al cargar los datos, por favor reintenta más tarde."
+            "load-data": "Ocurrió un problema al cargar los datos, por favor reintenta más tarde.",
+            "change-state": "Ocurrió un problema al cambiar el estado del enlace, por favor reintenta más tarde."
+        },
+        "modal-inactivate": {
+            "title": "¿Estás seguro de inactivar el enlace?",
+            "description": "Si inactivas este enlace cada vez que alguien lo utilice redireccionará a la página <a href=\"/not-available\" target=\"_blank\">no disponible</a>.",
+            "button-accept": "Inactivar",
+            "button-cancel": "Cancelar"
+        },
+        "modal-activate": {
+            "title": "¿Estás seguro de activar nuevamente el enlace?",
+            "description": "Si activas este enlace volverá a estar disponible para las personas con quienes lo compartiste.",
+            "button-accept": "Activar",
+            "button-cancel": "Cancelar"
+        },
+        "alert": {
+            "inactivate": "El enlace fue inactivado exitosamente.",
+            "activate": "El enlace fue activado exitosamente."
         }
     },
     "item-link": {
