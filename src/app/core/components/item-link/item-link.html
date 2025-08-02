@@ -20,5 +20,8 @@
     <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end align-self-center row-gap-1">
         <app-button-copy [textToCopy]="app.getUrlShort(item.urlShorten)">
         </app-button-copy>
+        <app-button-activate [state]="item.state"
+                             (onChange)="switch($event)">
+        </app-button-activate>
     </div>
 </div>
