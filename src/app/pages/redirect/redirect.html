@@ -1,0 +1,12 @@
+<div class="container py-2" *ngIf="showError">
+    <div class="row g-0 gy-3 gy-md-0 p-2 mt-2 d-flex flex-column align-items-md-center">
+        <div class="col col-md-8 col-lg-6">
+            <ng-lottie [options]="options"></ng-lottie>
+        </div>
+        <div class="col col-md-8 col-lg-6">
+            <h1>{{'redirect.error.title' | translate}}</h1>
+            <p>{{'redirect.error.description' | translate}}</p>
+            <span class="form-text">{{'redirect.error.note' | translate}}</span>
+        </div>
+    </div>
+</div>

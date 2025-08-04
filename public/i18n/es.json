@@ -65,5 +65,13 @@
     "not-available": {
         "title-page": "Contenido desactivado",
         "title": "Este enlace ha sido desactivado."
+    },
+    "redirect": {
+        "title-page": "Enlace No Encontrado | 404",
+        "error": {
+            "title": "Algo anda mal aquí.",
+            "description": "Este es un error 404 - no encontrado, lo que significa que hizo clic en un enlace incorrecto o ingresó una URL no válida.",
+            "note": "Recuerde que los enlaces cortos distinguen mayúsculas y minúsculas."
+        }
     }
 }

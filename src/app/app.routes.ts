@@ -15,5 +15,7 @@ export const routes: Routes = [
         ]
     },
     { path: 'not-available', loadComponent: () => import('./pages/not-available/not-available') },
+    { path: 'redirect', loadComponent: () => import('./pages/redirect/redirect') },
+    { path: 'redirect/:id', loadComponent: () => import('./pages/redirect/redirect') },
     { path: '**', loadComponent: () => import('./pages/not-found/not-found') }
 ];
