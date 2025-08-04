@@ -36,4 +36,11 @@ export class LinksService {
         return updateDoc(docRef, { state });
     }
 
+    public getUrlByLinkCorto(linkCorto: string): Observable<Array<ShortLink>> {
+        let queryConstraint: QueryConstraint[] = [ where(LINK.URLSHORTEN, "==", linkCorto) ];
+        
+        const linkRef = query(collection(this.fire, LINK.COLLECTION), ...queryConstraint);
+        return collectionData(linkRef, { idField: 'id'}) as Observable<ShortLink[]>;
+    }
+
 }
