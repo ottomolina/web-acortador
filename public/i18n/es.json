@@ -61,5 +61,9 @@
     "toggle": {
         "button-active": "Activar",
         "button-inactive": "Inactivar"
+    },
+    "not-available": {
+        "title-page": "Contenido desactivado",
+        "title": "Este enlace ha sido desactivado."
     }
 }

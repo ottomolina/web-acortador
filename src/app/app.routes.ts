@@ -14,5 +14,6 @@ export const routes: Routes = [
             { path: 'form-link', loadComponent: () => import('./pages/form-link/form-link') },
         ]
     },
+    { path: 'not-available', loadComponent: () => import('./pages/not-available/not-available') },
     { path: '**', loadComponent: () => import('./pages/not-found/not-found') }
 ];
