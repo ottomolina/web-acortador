@@ -6,6 +6,8 @@ import { firstValueFrom } from 'rxjs';
 import { LinksService } from '../../core/services/links/links.service';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 import { Title } from '@angular/platform-browser';
+import { CounterService } from '../../core/services/counter/counter.service';
+import { App } from '../../app';
 
 interface IParams {
   id: string;
@@ -35,7 +37,10 @@ export default class Redirect implements OnInit {
     private router: Router,
     private title: Title,
     private translate: TranslateService,
-  ) { }
+    private counterService: CounterService,
+    private app: App,
+  ) {
+  }
   
   async ngOnInit(): Promise<void> {
     try {
@@ -53,9 +58,14 @@ export default class Redirect implements OnInit {
         this.router.navigateByUrl('/not-available');
         return;
       }
+      this.changeTitle('redirect.title-page');
+      const datetime = this.app.getDatetime().substring(0,16);
+      const counter = await firstValueFrom(this.counterService.getListCounter(data[0].id!));
+      await this.counterService.incrementCounter(counter[0].id!, datetime);
       this.url = data[0].urlOriginal;
       this.goToPage();
     } catch(error) {
+      console.error('error', error);
       this.fnShowError();
     }
   }
@@ -63,16 +73,16 @@ export default class Redirect implements OnInit {
   private fnShowError() {
     this.showError = true;
     this.cdf.detectChanges();
-    this.changeTitle();
+    this.changeTitle('redirect.error.title-page');
   }
 
   public goToPage() {
     this.document.location.href = this.url;
   }
 
-  private changeTitle() {
+  private changeTitle(title: string) {
     setTimeout(() => {
-      this.title.setTitle(this.translate.instant('redirect.title-page'));
+      this.title.setTitle(this.translate.instant(title));
       this.cdf.detectChanges();
     }, 100);
   }

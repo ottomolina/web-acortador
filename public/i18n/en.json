@@ -67,8 +67,9 @@
         "title": "This link has been deactivated."
     },
     "redirect": {
-        "title-page": "Link Not Found | 404",
+        "title-page": "Redirecting...",
         "error": {
+            "title-page": "Link Not Found | 404",
             "title": "Something's wrong here.",
             "description": "This is a 404 - not found error, which means you've clicked on a bad link or entered an invalid URL.",
             "note": "Remembear that short links are case sensitive."
