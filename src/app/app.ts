@@ -28,4 +28,10 @@ export class App {
     const offset = date.getTimezoneOffset();
     return new Date(date.getTime() - (offset*60*1000)).toISOString().split('T')[0];
   }
+
+  public getDatetime() {
+    const date = new Date();
+    const offset = date.getTimezoneOffset();
+    return new Date(date.getTime() - (offset*60*1000)).toISOString();
+  }
 }
