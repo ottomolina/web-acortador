@@ -8,6 +8,7 @@ import { UrlValidator } from '../../shared/validators/url.validator';
 import { ShortLink } from '../../core/interfaces/short-link.model';
 import { LinksService } from '../../core/services/links/links.service';
 import { ButtonCopy } from "../../core/components/button-copy/button-copy";
+import { CounterService } from '../../core/services/counter/counter.service';
 
 @Component({
   selector: 'app-form-link',
@@ -28,6 +29,7 @@ export default class FormLink {
     private translate: TranslateService,
     private linkService: LinksService,
     private cdRef: ChangeDetectorRef,
+    private counterService: CounterService,
   ) {
   }
 
@@ -43,7 +45,8 @@ export default class FormLink {
       date: this.app.getDate(),
     }
     try {
-      await this.linkService.add(model);
+      const link = await this.linkService.add(model);
+      await this.counterService.createCounter(link.id);
       this.showSuccessAlert = true;
       this.shortLink = model;
       this.txtUrl = '';
