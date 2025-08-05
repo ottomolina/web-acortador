@@ -20,7 +20,7 @@ export class App {
   }
 
   public getUrlShort(linkShort: string) {
-    return `${location.origin}/${linkShort}`
+    return `${location.origin}/redirect/${linkShort}`
   }
 
   public getDate() {
