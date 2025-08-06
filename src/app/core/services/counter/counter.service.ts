@@ -4,6 +4,7 @@ import { addDoc, arrayUnion, collection, doc, query, QueryConstraint, updateDoc,
 import { COUNTER } from "../../constants/counter.constants";
 import { CounterLink } from "../../interfaces/counter-link.model";
 import { Observable } from "rxjs";
+import { AuthService } from "../auth/auth.service";
 
 @Injectable({
     providedIn: 'root'
@@ -12,10 +13,12 @@ export class CounterService {
 
     constructor(
         private fire: Firestore,
+        private auth: AuthService,
     ){}
 
     public createCounter(linkId: string) {
-        const counter: CounterLink = { linkId, datetime: [] }
+        const { id: uid } = this.auth.user!;
+        const counter: CounterLink = { linkId, uid, datetime: [] }
         const counterRef = collection(this.fire, COUNTER.COLLECTION);
         return addDoc(counterRef, counter);
     }
