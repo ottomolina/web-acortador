@@ -35,6 +35,7 @@
     "jsencrypt": "^3.3.2",
     "lottie-web": "^5.13.0",
     "ngx-lottie": "^20.0.0",
+    "ngx-skeleton-loader": "^11.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

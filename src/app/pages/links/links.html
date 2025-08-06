@@ -11,6 +11,9 @@
     <app-pagination [lengthList]="listaLinks.length"
                     (onChangePage)="changePage($event)">
     </app-pagination>
+    <div class="item" *ngIf="listaLinks.length === 0">
+        <ngx-skeleton-loader count="3" appearance="line" animation="progress" />
+    </div>
 </div>
 
 <app-confirmation-modal #modalConfirm

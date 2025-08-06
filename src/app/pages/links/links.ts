@@ -13,10 +13,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { CounterService } from '../../core/services/counter/counter.service';
 import { combineLatest } from 'rxjs';
 import { CounterLink } from '../../core/interfaces/counter-link.model';
+import { NgxSkeletonLoaderComponent } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-links',
-  imports: [CommonModule, Tabbar, TranslatePipe, ItemLink, Pagination, ConfirmationModal],
+  imports: [CommonModule, Tabbar, TranslatePipe, ItemLink, Pagination, ConfirmationModal, NgxSkeletonLoaderComponent],
   templateUrl: './links.html',
   styleUrl: './links.scss'
 })
