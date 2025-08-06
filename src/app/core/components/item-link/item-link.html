@@ -4,7 +4,7 @@
             <img alt="Favicon for url"
                 src="https://www.google.com/s2/favicons?domain={{item.urlOriginal}}&amp;sz=32">
         </div>
-        <div class="detail-link">
+        <div class="d-flex flex-column">
             <a class="link short-link" target="_blank" [href]="app.getUrlShort(item.urlShorten)">
                 {{app.getUrlShort(item.urlShorten)}}
             </a>
@@ -15,9 +15,12 @@
                 <i class="bx bx-calendar-alt"></i>
                 <span>{{item.date | dateFormat}}</span>
             </span>
+            <span class="text-success fw-bold">
+                {{'item-link.click' | translate}} {{totalClicks}}
+            </span>
         </div>
     </div>
-    <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end align-self-center row-gap-1">
+    <div class="col-md-4 d-flex flex-row flex-md-column justify-content-center align-items-center align-items-md-end align-self-center row-gap-1 column-gap-2">
         <app-button-copy [textToCopy]="app.getUrlShort(item.urlShorten)">
         </app-button-copy>
         <app-button-activate [state]="item.state"

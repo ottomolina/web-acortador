@@ -4,6 +4,7 @@
     </app-tabbar>
     <app-item-link *ngFor="let item of listaLinks | slice: initial:final"
                     [item]="item"
+                    [totalClicks]="getTotalClicksPerLink(item)"
                     (onChangeState)="changeStateItem($event)">
     </app-item-link>
     <br>

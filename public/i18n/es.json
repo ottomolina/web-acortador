@@ -40,7 +40,8 @@
     },
     "item-link": {
         "button-copy": "Copiar",
-        "copied": "Enlace copiado!"
+        "copied": "Enlace copiado!",
+        "click": "Total de clics:"
     },
     "button-copy": {
         "text": "Copiar",

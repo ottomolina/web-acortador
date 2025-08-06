@@ -10,6 +10,9 @@ import { Pagination } from "../../core/components/pagination/pagination";
 import { ConfirmationModal } from "../../core/components/confirmation-modal/confirmation-modal";
 import { ModalOptions } from '../../core/interfaces/modal-options.interface';
 import { DomSanitizer } from '@angular/platform-browser';
+import { CounterService } from '../../core/services/counter/counter.service';
+import { combineLatest } from 'rxjs';
+import { CounterLink } from '../../core/interfaces/counter-link.model';
 
 @Component({
   selector: 'app-links',
@@ -21,6 +24,7 @@ export default class Links implements OnInit {
   @ViewChild('modalConfirm') public modalConfirm: ConfirmationModal;
   public listaLinks: Array<ShortLink>=[];
   public listaLinksAux: Array<ShortLink>=[];
+  public listCounter: Array<CounterLink>=[];
   
   public initial: number = 0;
   public final: number = 10;
@@ -38,23 +42,33 @@ export default class Links implements OnInit {
     private translate: TranslateService,
     private cdRef: ChangeDetectorRef,
     public sanitized: DomSanitizer,
+    public counterService: CounterService,
   ) {
     this.final = app.sizePagination;
   }
 
   public ngOnInit(): void {
     this.listaLinks = [];
-    this.linkService.getData().subscribe({
-      next: result => {
-        this.listaLinks = result;
-        this.listaLinksAux = result;
+    combineLatest([
+      this.linkService.getData(),
+      this.counterService.getListCounterByUid()
+    ]).subscribe({
+      next: ([links, counters]) => {
+        this.listCounter = counters;
+        this.listaLinks = links;
+        this.listaLinksAux = links;
         this.cdRef.detectChanges();
       },
       error: error => {
         console.error('error', error);
         this.app.toast.error(this.translate.instant('links.error.load-data'));
       }
-    });
+    })
+  }
+
+  public getTotalClicksPerLink(item: ShortLink): number {
+    const counter = this.listCounter.filter(e => e.linkId === item.id)[0];
+    return counter!.datetime.length;
   }
 
   public changePage(number: number) {
