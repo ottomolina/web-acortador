@@ -41,7 +41,13 @@
     "item-link": {
         "button-copy": "Copy",
         "copied": "Link copied!",
-        "click": "Total clicks:"
+        "click": "Total clicks:",
+        "info": {
+            "page-icon": "Page icon.",
+            "short-link": "Short link.",
+            "long-link": "Link to redirect.",
+            "date-created": "Creation date."
+        }
     },
     "button-copy": {
         "text": "Copy",
@@ -60,8 +66,8 @@
         }
     },
     "toggle": {
-        "button-active": "Activate",
-        "button-inactive": "Inactivate"
+        "button-active": "Activate link",
+        "button-inactive": "Inactivate link"
     },
     "not-available": {
         "title-page": "Content deactivated",

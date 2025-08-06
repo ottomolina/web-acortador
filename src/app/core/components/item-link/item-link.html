@@ -2,18 +2,19 @@
     <div class="col-md-8 d-flex column-gap-3 container-link">
         <div class="container-icon">
             <img alt="Favicon for url"
+                [title]="'item-link.info.page-icon'|translate"
                 src="https://www.google.com/s2/favicons?domain={{item.urlOriginal}}&amp;sz=32">
         </div>
         <div class="d-flex flex-column">
-            <a class="link short-link" target="_blank" [href]="app.getUrlShort(item.urlShorten)">
+            <a class="link short-link" target="_blank" [href]="app.getUrlShort(item.urlShorten)" [title]="'item-link.info.short-link'|translate">
                 {{app.getUrlShort(item.urlShorten)}}
             </a>
-            <a class="link long-link" target="_blank" [href]="item.urlOriginal">
+            <a class="link long-link" target="_blank" [href]="item.urlOriginal" [title]="'item-link.info.long-link'|translate">
                 {{item.urlOriginal}}
             </a>
-            <span>
+            <span [title]="'item-link.info.date-created'|translate">
                 <i class="bx bx-calendar-alt"></i>
-                <span>{{item.date | dateFormat}}</span>
+                <span>{{item.date | dateFormat:'long'}}</span>
             </span>
             <span class="text-success fw-bold">
                 {{'item-link.click' | translate}} {{totalClicks}}

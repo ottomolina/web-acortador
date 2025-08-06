@@ -41,7 +41,13 @@
     "item-link": {
         "button-copy": "Copiar",
         "copied": "Enlace copiado!",
-        "click": "Total de clics:"
+        "click": "Total de clics:",
+        "info": {
+            "page-icon": "Icono de página.",
+            "short-link": "Enlace acortado.",
+            "long-link": "Enlace a redirigir.",
+            "date-created": "Fecha de creación."
+        }
     },
     "button-copy": {
         "text": "Copiar",
@@ -60,8 +66,8 @@
         }
     },
     "toggle": {
-        "button-active": "Activar",
-        "button-inactive": "Inactivar"
+        "button-active": "Activar enlace",
+        "button-inactive": "Inactivar enlace"
     },
     "not-available": {
         "title-page": "Contenido desactivado",
