@@ -59,8 +59,8 @@ export default class Redirect implements OnInit {
         return;
       }
       this.changeTitle('redirect.title-page');
-      const datetime = this.app.getDatetime().substring(0,16);
-      const counter = await firstValueFrom(this.counterService.getListCounter(data[0].id!));
+      const datetime = this.app.getDate();
+      const counter = await firstValueFrom(this.counterService.getCounterById(data[0].id!));
       await this.counterService.incrementCounter(counter[0].id!, datetime);
       this.url = data[0].urlOriginal;
       this.goToPage();

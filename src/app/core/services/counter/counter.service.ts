@@ -23,8 +23,15 @@ export class CounterService {
         return addDoc(counterRef, counter);
     }
 
-    public getListCounter(linkId: string): Observable<Array<CounterLink>> {
+    public getCounterById(linkId: string): Observable<Array<CounterLink>> {
         let queryConstraint: QueryConstraint[] = [ where(COUNTER.LINKID, "==", linkId) ];
+        const counterRef = query(collection(this.fire, COUNTER.COLLECTION), ...queryConstraint);
+        return collectionData(counterRef, { idField: 'id'}) as Observable<CounterLink[]>;
+    }
+
+    public getListCounterByUid(): Observable<Array<CounterLink>> {
+        const { id: uid } = this.auth.user!;
+        let queryConstraint: QueryConstraint[] = [ where(COUNTER.UID, "==", uid) ];
         const counterRef = query(collection(this.fire, COUNTER.COLLECTION), ...queryConstraint);
         return collectionData(counterRef, { idField: 'id'}) as Observable<CounterLink[]>;
     }
