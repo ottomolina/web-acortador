@@ -49,20 +49,22 @@ export default class Redirect implements OnInit {
         this.fnShowError();
         return;
       }
-      const data = await firstValueFrom(this.linkService.getUrlByLinkCorto(params.id));
-      if(data.length === 0) {
+      const shortLink = await firstValueFrom(this.linkService.getUrlByLinkCorto(params.id));
+      if(shortLink.length === 0) {
         this.fnShowError();
         return;
       }
-      if(!data[0].state) {
+      if(!shortLink[0].state) {
         this.router.navigateByUrl('/not-available');
         return;
       }
       this.changeTitle('redirect.title-page');
       const datetime = this.app.getDate();
-      const counter = await firstValueFrom(this.counterService.getCounterById(data[0].id!));
-      await this.counterService.incrementCounter(counter[0].id!, datetime);
-      this.url = data[0].urlOriginal;
+      const listCounter = await firstValueFrom(this.counterService.getCounterByLinkId(shortLink[0].id!));
+      const counter = listCounter[0];
+      counter.datetime.push(datetime);
+      await this.counterService.incrementCounter(counter);
+      this.url = shortLink[0].urlOriginal;
       this.goToPage();
     } catch(error) {
       console.error('error', error);
