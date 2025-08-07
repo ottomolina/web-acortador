@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 declare var bootstrap: any;
@@ -14,6 +15,8 @@ export class Tabbar {
   @Input() public search: boolean = true;
   @Output() public onSearch = new EventEmitter<string>();
 
+  private router: Router = inject(Router);
+
   clickBtnSearch() {
     const collapse = document.getElementById('divInput');
     const col = new bootstrap.Collapse(collapse);
@@ -22,5 +25,9 @@ export class Tabbar {
 
   inputSearch(event: any) {
     this.onSearch.emit(event.srcElement.value);
+  }
+
+  clickBtnAdd() {
+    this.router.navigateByUrl('/dashboard/form-link');
   }
 }
