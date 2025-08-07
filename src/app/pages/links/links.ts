@@ -14,21 +14,26 @@ import { CounterService } from '../../core/services/counter/counter.service';
 import { combineLatest } from 'rxjs';
 import { CounterLink } from '../../core/interfaces/counter-link.model';
 import { NgxSkeletonLoaderComponent } from 'ngx-skeleton-loader';
+import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 
 @Component({
   selector: 'app-links',
-  imports: [CommonModule, Tabbar, TranslatePipe, ItemLink, Pagination, ConfirmationModal, NgxSkeletonLoaderComponent],
+  imports: [CommonModule, Tabbar, TranslatePipe, ItemLink, Pagination, ConfirmationModal, NgxSkeletonLoaderComponent, LottieComponent],
   templateUrl: './links.html',
   styleUrl: './links.scss'
 })
 export default class Links implements OnInit {
   @ViewChild('modalConfirm') public modalConfirm: ConfirmationModal;
+  public options: AnimationOptions = {
+    path: './no-links.json'
+  };
   public listaLinks: Array<ShortLink>=[];
   public listaLinksAux: Array<ShortLink>=[];
   public listCounter: Array<CounterLink>=[];
   
   public initial: number = 0;
   public final: number = 10;
+  public loading: boolean = true;
 
   public modalOptions: ModalOptions = {
     title: "links.modal-inactivate.title",
@@ -58,9 +63,11 @@ export default class Links implements OnInit {
         this.listCounter = counters;
         this.listaLinks = links;
         this.listaLinksAux = links;
+        this.loading = false;
         this.cdRef.detectChanges();
       },
       error: error => {
+        this.loading = false;
         console.error('error', error);
         this.app.toast.error(this.translate.instant('links.error.load-data'));
       }

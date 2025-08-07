@@ -17,6 +17,8 @@
     },
     "links": {
         "title-tabbar": "Mis Enlaces Acortados",
+        "no-data": "No se han encontrado resultados.",
+        "no-data-description": "Intenta ajustar el filtro o crea un nuevo enlace.",
         "error": {
             "load-data": "Ocurrió un problema al cargar los datos, por favor reintenta más tarde.",
             "change-state": "Ocurrió un problema al cambiar el estado del enlace, por favor reintenta más tarde."

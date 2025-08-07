@@ -17,6 +17,8 @@
     },
     "links": {
         "title-tabbar": "My Links Shortened",
+        "no-data": "No results found.",
+        "no-data-description": "Try adjusting the filter or create a new link.",
         "error": {
             "load-data": "An error has occurred while data was loading, please retry later.",
             "change-state": "An error has occurred changing the link status, please retry again later."

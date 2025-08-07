@@ -1,4 +1,4 @@
-<div class="container-md g-0 py-2">
+<div class="container py-2">
     <app-tabbar [title]="'links.title-tabbar' | translate"
                 (onSearch)="search($event)">
     </app-tabbar>
@@ -11,8 +11,17 @@
     <app-pagination [lengthList]="listaLinks.length"
                     (onChangePage)="changePage($event)">
     </app-pagination>
-    <div class="item" *ngIf="listaLinks.length === 0">
+    
+    <div class="item" *ngIf="listaLinks.length === 0 && loading">
         <ngx-skeleton-loader count="3" appearance="line" animation="progress" />
+    </div>
+    
+    <div class="row g-0 gy-3 gy-md-0 p-2 mt-2 d-flex justify-content-md-center" *ngIf="listaLinks.length === 0 && !loading">
+        <div class="col col-md-6 col-lg-6">
+            <ng-lottie width="90%" [options]="options"></ng-lottie>
+            <h5>{{'links.no-data'|translate}}</h5>
+            <span>{{'links.no-data-description'|translate}}</span>
+        </div>
     </div>
 </div>
 
