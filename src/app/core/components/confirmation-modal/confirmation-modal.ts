@@ -11,22 +11,25 @@ declare var bootstrap: any;
   styleUrl: './confirmation-modal.scss'
 })
 export class ConfirmationModal implements OnInit {
-  private alertInactivate: any;
+  private alertModal: any;
   @Input() public options: ModalOptions;
+  @Input() public id: string = '';
 
   @Output() public onAccept = new EventEmitter();
   @Output() public onCancel = new EventEmitter();
 
   public ngOnInit(): void {
-    this.alertInactivate = new bootstrap.Modal('#alertInactivate');
+    setTimeout(() => {
+      this.alertModal = new bootstrap.Modal('#alertModal'+this.id);
+    }, 100);
   }
 
   public show() {
-    this.alertInactivate.show();
+    this.alertModal.show();
   }
 
   public hide() {
-    this.alertInactivate.hide();
+    this.alertModal.hide();
   }
 
   public acceptModal() {

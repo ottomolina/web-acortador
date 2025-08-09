@@ -7,11 +7,11 @@ import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideLottieOptions } from 'ngx-lottie';
 import player from 'lottie-web/build/player/lottie_svg';
-import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { environment } from '../environments/environment.development';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideNgxSkeletonLoader } from 'ngx-skeleton-loader';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 
 function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './i18n/', '.json');
@@ -31,22 +31,6 @@ export const appConfig: ApplicationConfig = {
       },
     }),
     provideLottieOptions({ player: () => player }),
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        lang: 'en',
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(environment.googleClientId)
-          }
-        ],
-        onError: (err) => {
-          console.error(err);
-        }
-      } as SocialAuthServiceConfig,
-    },
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
     provideNgxSkeletonLoader({
@@ -54,6 +38,7 @@ export const appConfig: ApplicationConfig = {
         extendsFromRoot: true,
         height: '114px',
       },
-    })
+    }),
+    provideAuth(() => getAuth())
   ]
 };

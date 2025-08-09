@@ -1,21 +1,28 @@
 <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
         <div class="navbar-brand">{{'nav.title' | translate}}</div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item" *ngFor="let item of listLinks">
                     <a class="nav-link"
                         [ngClass]="{'active': getActive(item.goTo)}"
+                        [class]="item.listClass"
                         (click)="clickLink(item.goTo)"
                         >
                         {{item.text | translate}}
                     </a>
                 </li>
             </ul>
+        </div>
+        <button class="navbar-toggler mt-2" type="button" (click)="clickToggle()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-none d-md-flex" role="search">
+            <button class="btn btn-danger"
+                    [title]="'nav.info.button-close-session' | translate"
+                    (click)="clickCloseSession()">
+                 <img src="arrow-out-right.svg">
+            </button>
         </div>
     </div>
 </nav>

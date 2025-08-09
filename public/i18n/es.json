@@ -7,13 +7,18 @@
     },
     "login": {
         "card-title": "Bienvenido",
-        "error-login": "Ha ocurrido un error mientras intentabas acceder, por favor reintenta más tarde."
+        "error-login": "Ha ocurrido un error mientras intentabas acceder, por favor reintenta más tarde.",
+        "button-login": "Acceder con Google"
     },
     "nav": {
         "title": "Acortador de Enlaces",
         "menu1": "Mis Enlaces",
         "menu2": "Nuevo Enlace",
-        "placeholder-search": "Buscar..."
+        "menu3": "Cerrar sesión",
+        "placeholder-search": "Buscar...",
+        "info": {
+            "button-close-session": "Cerrar sesión."
+        }
     },
     "links": {
         "title-tabbar": "Mis Enlaces Acortados",
@@ -83,5 +88,12 @@
             "description": "Este es un error 404 - no encontrado, lo que significa que hizo clic en un enlace incorrecto o ingresó una URL no válida.",
             "note": "Recuerde que los enlaces cortos distinguen mayúsculas y minúsculas."
         }
+    },
+    
+    "modal-close-session": {
+        "title": "¿Confirma que quieres cerrar la sesión?",
+        "description": "Se te redirigirá a la página de inicio de sesión.",
+        "button-accept": "Aceptar",
+        "button-cancel": "Cancelar"
     }
 }

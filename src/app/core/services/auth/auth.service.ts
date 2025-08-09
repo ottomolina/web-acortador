@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SocialUser } from '@abacritt/angularx-social-login';
+import { GoogleUser } from '../../interfaces/google-user.model';
 import { SecurityService } from '../../../shared/security/security.service';
 
 @Injectable({
@@ -12,18 +12,22 @@ export class AuthService {
     private secure: SecurityService
   ) { }
 
-  public setLogged(user: SocialUser) {
+  public setLogged(user: GoogleUser) {
     const data = this.secure.encrypt(user);
-    sessionStorage.setItem(this.KEY_TOKEN, JSON.stringify(data));
+    localStorage.setItem(this.KEY_TOKEN, JSON.stringify(data));
+  }
+
+  public logout() {
+    localStorage.removeItem(this.KEY_TOKEN);
   }
 
   public isAuthenticated() {
-    const data = sessionStorage.getItem(this.KEY_TOKEN);
+    const data = localStorage.getItem(this.KEY_TOKEN);
     if (data === null || data === undefined || data === '') {
       return false;
     }
     try {
-      this.secure.decrypt<SocialUser>(JSON.parse(data));
+      this.secure.decrypt<GoogleUser>(JSON.parse(data));
     } catch(error) {
       console.error('error', error);
       return false;
@@ -32,12 +36,12 @@ export class AuthService {
   }
 
   get user () {
-    const data = sessionStorage.getItem(this.KEY_TOKEN);
+    const data = localStorage.getItem(this.KEY_TOKEN);
     if (data === null || data === undefined || data === '') {
       return null;
     }
     try {
-      const userData = this.secure.decrypt<SocialUser>(JSON.parse(data));
+      const userData = this.secure.decrypt<GoogleUser>(JSON.parse(data));
       return userData;
     } catch(error) {
       console.error('error', error);

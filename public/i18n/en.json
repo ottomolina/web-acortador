@@ -7,13 +7,18 @@
     },
     "login": {
         "card-title": "Welcome",
-        "error-login": "An error has occurred while you were trying to access, please retry later."
+        "error-login": "An error has occurred while you were trying to access, please retry later.",
+        "button-login": "Access with Google"
     },
     "nav": {
         "title": "Link Shortener",
         "menu1": "My Links",
         "menu2": "New Link",
-        "placeholder-search": "Search..."
+        "menu3": "Log Out",
+        "placeholder-search": "Search...",
+        "info": {
+            "button-close-session": "Log out."
+        }
     },
     "links": {
         "title-tabbar": "My Links Shortened",
@@ -83,5 +88,11 @@
             "description": "This is a 404 - not found error, which means you've clicked on a bad link or entered an invalid URL.",
             "note": "Remembear that short links are case sensitive."
         }
+    },
+    "modal-close-session": {
+        "title": "¿Confirm that you want to log out?",
+        "description": "You will be redirected to the login page.",
+        "button-accept": "Ok",
+        "button-cancel": "Cancel"
     }
 }
