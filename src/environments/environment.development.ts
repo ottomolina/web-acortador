@@ -1,16 +1,14 @@
 export const environment = {
-    googleClientId: '992934477333-vp38q51qkselcegg720p3thjlgfeci07.apps.googleusercontent.com',
-
-    pvkv: 'MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAMzZ5w/VzB6TTdliYcj88U7ENYrN2a7dDO+ezPcPtiDvOLoGmgTu+dTSopek9kTHXyzze2THfxTuo3Wh9l6pbZ+5PGP9DKJhs60CaH2iMx/mt1QpqxRjTfw6Dm5xg816ljGB4XSd0Nf4jPcjjcY/zFO9SmSFVGZAGJdsMo9ibmELAgMBAAECgYAmNLHKm0ZhoXmQhK/WK47Z8PBHfhMOcP3bpxN1NMH0LIm48EhDiUqhLdPTUpn3w/N1T8gAyNBj2Ao2g0mO6CygmpuO5WIGHSssw68GRGNB09FxIYaTl8pMC3FcBDiSjps0dCz5vafBpE2+urc7gYdo022vt+ju2pudXAsoeU0p0QJBAP+2zz2rsPuTJNZMU1aqoBeVSbXI9r5RyEteUy92Pt74mRH+9izN+3XIaJpt395Wj9vsltufuIX0VxpOYhI/UsMCQQDNFIj6a/21xYKaqFMF0fd7dJ/jwH9828jp0ga912EXsY3PdvfyLyGKl8GxRnlvM32TBlETJVIwojW6tK+TdsQZAkBETy5vWAUQP09w27TLiwr3Ic8t+4BGeQxbbdgk7p5+68PgNc7HS0MoRKAE2OMbvt3xLvNhufoN9qaqBVRXcYkHAkBxoBoQ3bqRduBY/kAZrm73aPOZxbMdI80at/JiRq4V6ZtPwnO4LKLh3hlENm7bzOSbjFlpSTlTltw8GRZalugpAkAait7nqk+3QDsp7kXUVRBoMMHdU5Omg/Ti5WVuQ7YME69UvMo0oT28rganaiLo/zWSaZs7hsEzcQU4MNs9yhhP',
-    pbkv: 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDM2ecP1cwek03ZYmHI/PFOxDWKzdmu3Qzvnsz3D7Yg7zi6BpoE7vnU0qKXpPZEx18s83tkx38U7qN1ofZeqW2fuTxj/QyiYbOtAmh9ojMf5rdUKasUY038Og5ucYPNepYxgeF0ndDX+Iz3I43GP8xTvUpkhVRmQBiXbDKPYm5hCwIDAQAB',
+    pvkv: '',
+    pbkv: '',
 
     firebaseConfig: {
-        apiKey: "AIzaSyBPtv0OwwdpRVlsiU8poYb4Kjvrjj410CA",
-        authDomain: "acortador-45b0e.firebaseapp.com",
-        databaseURL: "https://acortador-45b0e-default-rtdb.firebaseio.com",
-        projectId: "acortador-45b0e",
-        storageBucket: "acortador-45b0e.firebasestorage.app",
-        messagingSenderId: "478575756523",
-        appId: "1:478575756523:web:ebab245eefeac44cecaaae"
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: ""
     },
 };
