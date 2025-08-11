@@ -1,4 +1,5 @@
 {
+    "app.title": "Acortador de links",
     "not_found": {
         "parragraph1": "La página solicitada no está disponible.",
         "parragraph2": "La página que estás intentando acceder no está disponible o ha sido movida.",

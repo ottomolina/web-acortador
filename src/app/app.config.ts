@@ -7,7 +7,7 @@ import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideLottieOptions } from 'ngx-lottie';
 import player from 'lottie-web/build/player/lottie_svg';
-import { environment } from '../environments/environment.development';
+import { environment } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideNgxSkeletonLoader } from 'ngx-skeleton-loader';
