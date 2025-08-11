@@ -1,0 +1,99 @@
+{
+    "app.title": "Links Shortener",
+    "not_found": {
+        "parragraph1": "Page requested is not available.",
+        "parragraph2": "Page you are trying to access is unavailable or has been moved.",
+        "parragraph3": "Try returning to the home page.",
+        "home_button": "Return to home"
+    },
+    "login": {
+        "card-title": "Welcome",
+        "error-login": "An error has occurred while you were trying to access, please retry later.",
+        "button-login": "Access with Google"
+    },
+    "nav": {
+        "title": "Link Shortener",
+        "menu1": "My Links",
+        "menu2": "New Link",
+        "menu3": "Log Out",
+        "placeholder-search": "Search...",
+        "info": {
+            "button-close-session": "Log out."
+        }
+    },
+    "links": {
+        "title-tabbar": "My Links Shortened",
+        "no-data": "No results found.",
+        "no-data-description": "Try adjusting the filter or create a new link.",
+        "error": {
+            "load-data": "An error has occurred while data was loading, please retry later.",
+            "change-state": "An error has occurred changing the link status, please retry again later."
+        },
+        "modal-inactivate": {
+            "title": "¿Are you sure to disable the link?",
+            "description": "If you inactivate this link every time someone uses it, it will redirect to the page <a href=\"/not-available\" target=\"_blank\">not available</a>.",
+            "button-accept": "Inactivate",
+            "button-cancel": "Cancel"
+        },
+        "modal-activate": {
+            "title": "¿Are you sure to enable the link?",
+            "description": "If you activate this link it will be available again to the people with whom you shared it.",
+            "button-accept": "Activate",
+            "button-cancel": "Cancel"
+        },
+        "alert": {
+            "inactivate": "The link was successfully inactivated.",
+            "activate": "The link was successfully activated."
+        }
+    },
+    "item-link": {
+        "button-copy": "Copy",
+        "copied": "Link copied!",
+        "click": "Total clicks:",
+        "info": {
+            "page-icon": "Page icon.",
+            "short-link": "Short link.",
+            "long-link": "Link to redirect.",
+            "date-created": "Creation date."
+        }
+    },
+    "button-copy": {
+        "text": "Copy",
+        "text-copied": "Copied!"
+    },
+    "form-link": {
+        "title": "Shorten New Link",
+        "placeholder-link": "Enter your long url here",
+        "button-action": "Shorten",
+        "text-result": "Shortened link",
+        "success-result": "Link shortened successfully!",
+        "error": {
+            "txt-url-blank": "Please enter a URL.",
+            "txt-url-invalid": "The URL format is invalid. Make sure to include http:// or https://",
+            "add-link": "An error has occurred while saving your shortened link, please retry later."
+        }
+    },
+    "toggle": {
+        "button-active": "Activate link",
+        "button-inactive": "Inactivate link"
+    },
+    "not-available": {
+        "title-page": "Content deactivated",
+        "title": "This link has been deactivated."
+    },
+    "redirect": {
+        "title-page": "Redirecting...",
+        "error": {
+            "title-page": "Link Not Found | 404",
+            "title": "Something's wrong here.",
+            "description": "This is a 404 - not found error, which means you've clicked on a bad link or entered an invalid URL.",
+            "note": "Remembear that short links are case sensitive."
+        }
+    },
+    "modal-close-session": {
+        "title": "¿Confirm that you want to log out?",
+        "description": "You will be redirected to the login page.",
+        "button-accept": "Ok",
+        "button-cancel": "Cancel"
+    }
+}
