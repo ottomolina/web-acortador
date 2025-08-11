@@ -1,0 +1,40 @@
+
+.container-todo-link {
+    border: 1px groove;
+    border-radius: 8px;
+}
+
+.container-icon img {
+    border: 1px groove;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.bx {
+    margin-right: 6px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.short-link {
+    color: #003ace;
+}
+
+.long-link {
+    color: #000000;
+}
+
+.link {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

@@ -1,0 +1,27 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand">{{title}}</a>				
+        <div class="d-flex column-gap-1">
+            <button type="button" class="btn btn-outline-success" 
+                    (click)="clickBtnSearch()"
+                    *ngIf="search">
+                <i class="bx bx-search"></i>
+            </button>
+            <button type="button" class="btn btn-outline-success d-flex d-md-none" 
+                    (click)="clickBtnAdd()">
+                <i class="bx bx-plus"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+<div class="collapse" id="divInput">
+    <div class="card card-body">
+        <div class="mb-3">
+            <input type="search"
+                    class="form-control"
+                    id="txtSearch"
+                    [placeholder]="'nav.placeholder-search' | translate"
+                    (input)="inputSearch($event)">
+        </div>
+    </div>
+</div>

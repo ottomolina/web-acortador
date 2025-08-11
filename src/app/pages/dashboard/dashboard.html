@@ -1,0 +1,9 @@
+<app-navbar (onCloseSession)="eventLogout()"></app-navbar>
+<router-outlet></router-outlet>
+
+<app-confirmation-modal #modalLogout
+                        [options]="modalOptions"
+                        [id]="'logout'"
+                        (onAccept)="logout()">
+    <span>{{'modal-close-session.description'|translate}}</span>
+</app-confirmation-modal>

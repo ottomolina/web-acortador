@@ -1,0 +1,45 @@
+<div class="row" *ngIf="listNumbers.length > 1">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <button type="button"
+                    (click)="clickPrevFirst()"
+                    [ngClass]="{'disabled': numberActive===1}"
+                    class="page-link"
+                    *ngIf="listNumbers.length > app.sizePagination">
+                <i class='bx bx-chevrons-left'></i>
+            </button>
+        </li>
+        <li class="page-item">
+            <button type="button"
+                    (click)="clickPrev()"
+                    [ngClass]="{'disabled': numberActive===1}"
+                    class="page-link">
+                <i class='bx bx-chevron-left'></i>
+            </button>
+        </li>
+        <li *ngFor="let item of listNumbers | slice: initial:final" class="page-item" [ngClass]="{'active': item.active}">
+            <button type="button"
+                    class="page-link"
+                    (click)="clickPage(item.number)">
+                {{item.number}}
+            </button>
+        </li>
+        <li class="page-item">
+            <button type="button"
+                    (click)="clickNext()"
+                    [ngClass]="{'disabled': numberActive===listNumbers.length}"
+                    class="page-link">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+        </li>
+        <li class="page-item">
+            <button type="button"
+                    (click)="clickNextLast()"
+                    [ngClass]="{'disabled': numberActive===listNumbers.length}"
+                    class="page-link"
+                    *ngIf="listNumbers.length > app.sizePagination">
+                <i class='bx bx-chevrons-right'></i>
+            </button>
+        </li>
+    </ul>
+</div>

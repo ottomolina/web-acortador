@@ -1,0 +1,33 @@
+<div class="container py-2">
+    <app-tabbar [title]="'links.title-tabbar' | translate"
+                (onSearch)="search($event)">
+    </app-tabbar>
+    <app-item-link *ngFor="let item of listaLinks | slice: initial:final"
+                    [item]="item"
+                    [totalClicks]="getTotalClicksPerLink(item)"
+                    (onChangeState)="changeStateItem($event)">
+    </app-item-link>
+    <br>
+    <app-pagination [lengthList]="listaLinks.length"
+                    (onChangePage)="changePage($event)">
+    </app-pagination>
+    
+    <div class="item" *ngIf="listaLinks.length === 0 && loading">
+        <ngx-skeleton-loader count="3" appearance="line" animation="progress" />
+    </div>
+    
+    <div class="row g-0 gy-3 gy-md-0 p-2 mt-2 d-flex justify-content-md-center" *ngIf="listaLinks.length === 0 && !loading">
+        <div class="col col-md-6 col-lg-6">
+            <ng-lottie width="90%" [options]="options"></ng-lottie>
+            <h5>{{'links.no-data'|translate}}</h5>
+            <span>{{'links.no-data-description'|translate}}</span>
+        </div>
+    </div>
+</div>
+
+<app-confirmation-modal #modalConfirm
+                        [options]="modalOptions"
+                        (onCancel)="cancelModal()"
+                        (onAccept)="changeState()">
+    <span [innerHTML]="getDescription()"></span>
+</app-confirmation-modal>

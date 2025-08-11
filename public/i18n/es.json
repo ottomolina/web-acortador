@@ -1,0 +1,100 @@
+{
+    "app.title": "Acortador de links",
+    "not_found": {
+        "parragraph1": "La página solicitada no está disponible.",
+        "parragraph2": "La página que estás intentando acceder no está disponible o ha sido movida.",
+        "parragraph3": "Intenta volver a la página de inicio.",
+        "home_button": "Regresar a inicio"
+    },
+    "login": {
+        "card-title": "Bienvenido",
+        "error-login": "Ha ocurrido un error mientras intentabas acceder, por favor reintenta más tarde.",
+        "button-login": "Acceder con Google"
+    },
+    "nav": {
+        "title": "Acortador de Enlaces",
+        "menu1": "Mis Enlaces",
+        "menu2": "Nuevo Enlace",
+        "menu3": "Cerrar sesión",
+        "placeholder-search": "Buscar...",
+        "info": {
+            "button-close-session": "Cerrar sesión."
+        }
+    },
+    "links": {
+        "title-tabbar": "Mis Enlaces Acortados",
+        "no-data": "No se han encontrado resultados.",
+        "no-data-description": "Intenta ajustar el filtro o crea un nuevo enlace.",
+        "error": {
+            "load-data": "Ocurrió un problema al cargar los datos, por favor reintenta más tarde.",
+            "change-state": "Ocurrió un problema al cambiar el estado del enlace, por favor reintenta más tarde."
+        },
+        "modal-inactivate": {
+            "title": "¿Estás seguro de inactivar el enlace?",
+            "description": "Si inactivas este enlace cada vez que alguien lo utilice redireccionará a la página <a href=\"/not-available\" target=\"_blank\">no disponible</a>.",
+            "button-accept": "Inactivar",
+            "button-cancel": "Cancelar"
+        },
+        "modal-activate": {
+            "title": "¿Estás seguro de activar nuevamente el enlace?",
+            "description": "Si activas este enlace volverá a estar disponible para las personas con quienes lo compartiste.",
+            "button-accept": "Activar",
+            "button-cancel": "Cancelar"
+        },
+        "alert": {
+            "inactivate": "El enlace fue inactivado exitosamente.",
+            "activate": "El enlace fue activado exitosamente."
+        }
+    },
+    "item-link": {
+        "button-copy": "Copiar",
+        "copied": "Enlace copiado!",
+        "click": "Total de clics:",
+        "info": {
+            "page-icon": "Icono de página.",
+            "short-link": "Enlace acortado.",
+            "long-link": "Enlace a redirigir.",
+            "date-created": "Fecha de creación."
+        }
+    },
+    "button-copy": {
+        "text": "Copiar",
+        "text-copied": "Copiado!"
+    },
+    "form-link": {
+        "title": "Acortar un Nuevo Enlace",
+        "placeholder-link": "Ingresa tu url larga aquí",
+        "button-action": "Acortar",
+        "text-result": "Enlace acortado",
+        "success-result": "Enlace acortado con éxito!",
+        "error": {
+            "txt-url-blank": "Por favor introduce una URL.",
+            "txt-url-invalid": "El formato de la URL no es válido. Asegúrate de incluir http:// o https://",
+            "add-link": "Ocurrió un problema mientras se guardaba tu enlace acortado, por favor intenta más tarde."
+        }
+    },
+    "toggle": {
+        "button-active": "Activar enlace",
+        "button-inactive": "Inactivar enlace"
+    },
+    "not-available": {
+        "title-page": "Contenido desactivado",
+        "title": "Este enlace ha sido desactivado."
+    },
+    "redirect": {
+        "title-page": "Redireccionando...",
+        "error": {
+            "title-page": "Enlace No Encontrado | 404",
+            "title": "Algo anda mal aquí.",
+            "description": "Este es un error 404 - no encontrado, lo que significa que hizo clic en un enlace incorrecto o ingresó una URL no válida.",
+            "note": "Recuerde que los enlaces cortos distinguen mayúsculas y minúsculas."
+        }
+    },
+    
+    "modal-close-session": {
+        "title": "¿Confirma que quieres cerrar la sesión?",
+        "description": "Se te redirigirá a la página de inicio de sesión.",
+        "button-accept": "Aceptar",
+        "button-cancel": "Cancelar"
+    }
+}

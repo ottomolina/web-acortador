@@ -1,0 +1,45 @@
+<div class="container py-2">
+    <app-tabbar [title]="'form-link.title'|translate" [search]="false"></app-tabbar>
+    <br>
+    <div class="row px-2 px-md-0">
+        <div class="col d-flex flex-md-row flex-column gap-3">
+            <input type="text"
+                    class="form-control"
+                    id="txtLink"
+                    [(ngModel)]="txtUrl"
+                    [placeholder]="'form-link.placeholder-link'|translate"
+                    aria-describedby="errorBlock">
+            <div id="errorBlock" class="form-text d-flex d-md-none" *ngIf="error">
+                {{error}}
+            </div>
+            <button type="button"
+                    style="height: fit-content"
+                    class="btn btn-primary"
+                    (click)="clickAdd()"
+                    [disabled]="disabledBtnAction">
+                {{'form-link.button-action'|translate}}
+            </button>
+        </div>
+    </div>
+    <div class="row px-2 px-md-0 d-none d-md-flex" *ngIf="error">
+        <div id="errorBlock" class="form-text">
+            {{error}}
+        </div>
+    </div>
+    <br>
+    <div class="row mx-2 mx-md-0">
+        <div class="alert alert-success" role="alert" *ngIf="showSuccessAlert">
+            {{'form-link.success-result'|translate}}
+        </div>
+        <div class="col d-flex flex-md-row flex-column gap-3 col-result py-4" *ngIf="shortLink">
+            <p class=" d-flex flex-grow-1">
+                <span>{{'form-link.text-result'|translate}}:&nbsp;</span>
+                <a class="fw-bold" target="_blank" [href]="app.getUrlShort(shortLink.urlShorten)">
+                    {{app.getUrlShort(shortLink.urlShorten)}}
+                </a>
+            </p>
+            <app-button-copy [textToCopy]="app.getUrlShort(shortLink.urlShorten)">
+            </app-button-copy>
+        </div>
+    </div>
+</div>
