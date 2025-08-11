@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as CryptoJS from 'crypto-js';
 import JSEncrypt from 'jsencrypt';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { DataEncrypt } from '../../core/interfaces/data-encrypt.model';
 
 @Injectable({

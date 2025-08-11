@@ -4,6 +4,7 @@ import { LanguageTranslationService } from './shared/modules/language-translatio
 import { Toast } from "./core/components/toast/toast";
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,9 @@ export class App {
   }
 
   public getUrlShort(linkShort: string) {
+    if(environment.prod) {
+      return `${location.origin}/web-acortador/redirect/${linkShort}`
+    }
     return `${location.origin}/redirect/${linkShort}`
   }
 

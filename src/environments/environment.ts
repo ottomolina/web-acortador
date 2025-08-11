@@ -1,4 +1,6 @@
 export const environment = {
+    prod: true,
+    
     pvkv: '',
     pbkv: '',
 
